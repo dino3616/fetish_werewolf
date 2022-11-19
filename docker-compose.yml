@@ -6,21 +6,13 @@ services:
     build: ./
     volumes:
       - type: bind
-        source: ./.git
-        target: /fetish_werewolf/.git
-      - type: bind
-        source: ./.vscode
-        target: /fetish_werewolf/.vscode
-      - type: bind
-        source: ./src
-        target: /fetish_werewolf/src
-      - type: bind
-        source: ./.gitignore
-        target: /fetish_werewolf/.gitignore
-      - type: bind
-        source: ./Cargo.lock
-        target: /fetish_werewolf/Cargo.lock
-      - type: bind
-        source: ./Cargo.toml
-        target: /fetish_werewolf/Cargo.toml
+        source: ./
+        target: /fetish_werewolf/
+      - type: volume
+        source: target
+        target: /fetish_werewolf/target/
     tty: true
+
+volumes:
+  target:
+    driver: local
