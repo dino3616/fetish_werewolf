@@ -1,0 +1,22 @@
+{
+  "name": "fetish_werewolf",
+  "workspaceFolder": "fetish_werewolf",
+  "dockerComposeFile": ["../docker-compose.yml"],
+  "service": "app",
+  "extensions": [
+    "vadimcn.vscode-lldb",
+    "adam-bender.commit-message-editor",
+    "serayuzgur.crates",
+    "mikestead.dotenv",
+    "usernamehw.errorlens",
+    "tamasfe.even-better-toml",
+    "github.copilot",
+    "eamodio.gitlens",
+    "visualstudioexptteam.vscodeintellic",
+    "tamasfe.even-better-toml",
+    "rust-lang.rust-analyzer",
+    "tabnine.tabnine-vscode",
+    "hbenl.vscode-test-explorer",
+    "gruntfuggly.todo-tree"
+  ]
+}
