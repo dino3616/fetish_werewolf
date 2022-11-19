@@ -1,0 +1,14 @@
+# compiled output
+/target
+
+# logs
+*.log
+
+# env file
+.env*
+
+# tests
+/coverage
+
+# IDE - VSCode
+*.code-workspace
