@@ -9,6 +9,12 @@ enum AppError {
 
 type Context<'a> = poise::Context<'a, (), AppError>;
 
+#[poise::command(prefix_command, hide_in_help)]
+async fn register(ctx: Context<'_>, #[flag] global: bool) -> Result<(), AppError> {
+    poise::builtins::register_application_commands(ctx, global).await?;
+    Ok(())
+}
+
 #[poise::command(prefix_command, slash_command)]
 async fn add(
     ctx: Context<'_>,
@@ -31,9 +37,9 @@ async fn main() {
     let token = env::var("DISCORD_TOKEN").expect("Expected a token in the environment");
 
     let options = poise::FrameworkOptions {
-        commands: vec![add()],
+        commands: vec![register(), add()],
         prefix_options: poise::PrefixFrameworkOptions {
-            prefix: Some("!".to_string()),
+            prefix: Some("!fetish".to_string()),
             ..Default::default()
         },
         on_error: |err| Box::pin(on_error(err)),
