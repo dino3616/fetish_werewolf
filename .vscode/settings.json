@@ -1,5 +1,7 @@
 {
-  "terminal.integrated.commandsToSkipShell": ["-workbench.action.quickOpenView"],
+  "terminal.integrated.commandsToSkipShell": [
+    "-workbench.action.quickOpenView"
+  ],
   "commit-message-editor.view.defaultView": "form",
   "commit-message-editor.tokens": [
     {
@@ -142,5 +144,6 @@
       "multiline": true
     }
   ],
-  "rust-analyzer.checkOnSave.command": "clippy"
+  "rust-analyzer.checkOnSave.command": "clippy",
+  "rust-analyzer.inlayHints.maxLength": null
 }
