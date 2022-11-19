@@ -1,6 +1,8 @@
 use poise::serenity_prelude as serenity;
 
-pub async fn on_error(error: poise::FrameworkError<'_, (), anyhow::Error>) {
+use crate::context::Data;
+
+pub async fn on_error(error: poise::FrameworkError<'_, Data, anyhow::Error>) {
     log::error!("Error: {:?}", error);
 
     if let Some(ctx) = error.ctx() {
