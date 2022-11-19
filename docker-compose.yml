@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  app:
+    container_name: app
+    build: ./
+    volumes:
+      - type: bind
+        source: ./.vscode
+        target: /fetish_werewolf/.vscode
+      - type: bind
+        source: ./src
+        target: /fetish_werewolf/src
+      - type: bind
+        source: ./.gitignore
+        target: /fetish_werewolf/.gitignore
+      - type: bind
+        source: ./Cargo.lock
+        target: /fetish_werewolf/Cargo.lock
+      - type: bind
+        source: ./Cargo.toml
+        target: /fetish_werewolf/Cargo.toml
+    tty: true
