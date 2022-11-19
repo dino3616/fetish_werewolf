@@ -1,0 +1,14 @@
+changelog:
+  exclude:
+    labels:
+      - 🤖renovate
+  categories:
+    - title: Some critical issues have been resolved! 🚑
+      labels:
+        - 🚑重大な問題
+    - title: Oh, There are new features!! 🎉
+      labels:
+        - ✨新機能
+    - title: Other Changes
+      labels:
+        - '*'
