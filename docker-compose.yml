@@ -6,6 +6,9 @@ services:
     build: ./
     volumes:
       - type: bind
+        source: ./.git
+        target: /fetish_werewolf/.git
+      - type: bind
         source: ./.vscode
         target: /fetish_werewolf/.vscode
       - type: bind
