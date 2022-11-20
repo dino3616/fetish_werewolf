@@ -6,8 +6,8 @@ pub type Context<'a> = poise::Context<'a, Data, anyhow::Error>;
 
 #[derive(Debug)]
 pub struct Data {
-    attenders: Mutex<HashMap<String, model::Attender>>,
-    game_state: Mutex<GameState>,
+    pub attenders: Mutex<HashMap<String, model::Attender>>,
+    pub game_state: Mutex<GameState>,
 }
 
 impl Data {
