@@ -1,6 +1,6 @@
 use crate::context::Context;
 
-#[poise::command(prefix_command, track_edits, slash_command)]
+#[poise::command(prefix_command, slash_command)]
 pub async fn help(
     ctx: Context<'_>,
     #[description = "Specific command to show help about"]
