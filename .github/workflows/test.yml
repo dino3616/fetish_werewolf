@@ -21,6 +21,12 @@ jobs:
             target
           key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.toml') }}
 
+      - name: install rust
+        uses: actions-rs/toolchain@v1
+        with:
+          toolchain: nightly
+          override: true
+
       - name: build
         uses: actions-rs/cargo@v1
         with:
