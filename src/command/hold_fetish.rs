@@ -2,6 +2,7 @@ use poise::serenity_prelude as serenity;
 
 use crate::{context::Context, state::GameState};
 
+/// Holds a fetish werewolf.
 #[poise::command(prefix_command, slash_command)]
 pub async fn hold_fetish(ctx: Context<'_>) -> anyhow::Result<()> {
     let game_state = &ctx.data().game_state;
