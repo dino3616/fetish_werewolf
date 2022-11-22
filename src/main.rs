@@ -17,7 +17,13 @@ async fn main() -> anyhow::Result<()> {
     let token = env::var("DISCORD_TOKEN").expect("Expected a token in the environment");
 
     let options = poise::FrameworkOptions {
-        commands: vec![command::register(), command::help(), command::hold_fetish()],
+        commands: vec![
+            command::register(),
+            command::help(),
+            command::hold_fetish(),
+            command::join(),
+            command::change_fetish(),
+        ],
         prefix_options: poise::PrefixFrameworkOptions {
             prefix: Some("!fetish".to_string()),
             ..Default::default()
