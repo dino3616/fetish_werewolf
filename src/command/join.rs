@@ -32,6 +32,24 @@ pub async fn join(
     })
     .await?;
 
+    let attenders_len = {
+        let attenders = &ctx.data().attenders;
+        attenders.lock().unwrap().len()
+    };
+
+    ctx.send(|rep| {
+        rep.embed(|emb| {
+            emb.title(format!("{} joined Fetish Werewolf!", ctx.author().name))
+                .description(format!(
+                    "Now, there are currently {} attenders.",
+                    attenders_len
+                ))
+                .thumbnail(ctx.author().face())
+                .color(serenity::Color::from_rgb(0, 255, 190))
+        })
+    })
+    .await?;
+
     Ok(())
 }
 
