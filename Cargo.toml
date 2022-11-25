@@ -12,5 +12,6 @@ dotenv = "0.15.0"
 env_logger = "0.9.3"
 log = "0.4.17"
 poise = "0.4.1"
+rand = "0.8.5"
 thiserror = "1.0.37"
 tokio = { version = "1.21.2", features = ["rt-multi-thread"] }
