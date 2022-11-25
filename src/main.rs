@@ -23,6 +23,7 @@ async fn main() -> anyhow::Result<()> {
             command::hold_fetish(),
             command::join(),
             command::change_fetish(),
+            command::start(),
         ],
         prefix_options: poise::PrefixFrameworkOptions {
             prefix: Some("!fetish".to_string()),
